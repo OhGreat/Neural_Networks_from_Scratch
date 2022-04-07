@@ -8,15 +8,14 @@ class Activation():
         pass
 
 class Sigmoid(Activation):
-
     def __call__(self, x):
         return 1/(1 + np.exp(-x))
 
     def derivative(self, x):
         return x * (1 - x)
 
-class ReLU(Activation):
 
+class ReLU(Activation):
     def __call__(self, x):
         return np.maximum(0, x)
 

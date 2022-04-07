@@ -1,4 +1,3 @@
-from matplotlib.pyplot import axes
 import numpy as np
 
 

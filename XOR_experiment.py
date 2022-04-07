@@ -2,7 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from Error_functions import mse
 from Activations import *
-from Model import TwoLayerPerceptron
+from Model import *
+
 # Set seed for reproducibility
 np.random.seed(0)
 # Data
