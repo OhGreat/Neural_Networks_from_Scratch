@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from Error_functions import mse
+from error_functions import *
 from Activations import *
 from Model import *
 
