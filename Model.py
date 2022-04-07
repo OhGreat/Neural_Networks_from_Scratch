@@ -6,33 +6,50 @@ class TwoLayerPerceptron:
         self.hidden_weights = np.random.uniform(size=(input_size, hidden_size))
         self.hidden_bias = np.random.uniform(size=(1, hidden_size))
 
-        self.output_weights = np.random.uniform(size=(hidden_size, output_size))
+        self.output_weights = np.random.uniform(1,size=(hidden_size, output_size))
         self.output_bias = np.random.uniform(size=(1, output_size))
 
         self.activation = activation
         self.error_function = error_function
 
     def forward_pass(self, input, return_activations=False):
+        """ The forward pass of the neural network.
+            Parameters:
+                - input: variables to pass to the network
+                - return_activations: returns activations of hidden and output layer 
+        """
         hidden_layer_out = np.dot(input, self.hidden_weights) + self.hidden_bias
         hidden_layer_out = self.activation(hidden_layer_out)
 
-        output_layer_out = np.dot(hidden_layer_out, self.output_weights) + self.hidden_bias
+        output_layer_out = np.dot(hidden_layer_out, self.output_weights) + self.output_bias
         output_layer_out = self.activation(output_layer_out)
 
         if return_activations:
             return hidden_layer_out, output_layer_out
         return output_layer_out
 
-    def gradient_descent(self, X, y_true):
-        # Backpropagation step
+    def gradient_descent(self, X, y_true, lr):
+        """ Backpropagation step
+        
+        """
+        # take each layer output value
         hidden_layer_out, output_layer_out = self.forward_pass(X,return_activations=True)
         error = self.error_function(y_true, output_layer_out)
         d_predicted_output = error * self.activation.derivative(output_layer_out)
 
-        error_hidden_layer = np.dot(d_predicted_output,self.output_weights)
+        error_hidden_layer = np.dot(d_predicted_output,self.output_weights.T)
         d_hidden_layer = error_hidden_layer * self.activation.derivative(hidden_layer_out)
-        return d_predicted_output, d_hidden_layer
+
+        # Update weights and biases
+        self.output_weights += np.dot(hidden_layer_out.T,d_predicted_output) * lr
+        self.output_bias += np.sum(d_predicted_output, axis=0, keepdims=True) * lr
+        self.hidden_weights += np.dot(X.T,d_hidden_layer) * lr
+        self.hidden_bias += np.sum(d_hidden_layer,axis=0,keepdims=True) * lr
+        return error
 
     def train(self, X, y, lr, epochs):
-        for i in epochs:
-            pass
+        loss = []
+        for i in range(epochs):
+            loss.append(self.gradient_descent(X, y, lr))
+
+        return loss
