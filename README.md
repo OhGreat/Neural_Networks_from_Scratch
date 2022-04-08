@@ -21,8 +21,8 @@ python experiments.py
 
 ## Observations
 It interesting to note that when running the network with only two hidden nodes (which is the minimum requirement to emulate the XOR logic gate), the network sometimes fails to learn to simulate XOR. <br/>
-An example of this behaviour can be seen when running experiments with the seed set as <b>np.random.seed(0)</b>. In general, this is the result of bad weight initialization and the more neurons we add to the hidden layer, the harder it is for weight inintialization to influence the learning of the model.<br/>
-An example of the behaviour explained above can be seen on the image below.
+An example of this behaviour can be seen when running experiments with the seed set as <b>np.random.seed(0)</b>. In general, this is the result of bad weight initialization. The more neurons we add to the hidden layer, the harder it is for weight inintialization to influence the learning of the model.<br/>
+An example of the behaviour explained above can be seen on the image below:
 
 ![Screenshot](results/losses.png)
 
