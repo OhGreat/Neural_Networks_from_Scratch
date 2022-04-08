@@ -12,13 +12,20 @@ y = np.array([[0],[1],[1],[0]])
 
 activation_function = Sigmoid()
 error_function = mse
-model = TwoLayerPerceptron(2,2,1,activation_function,error_function)
+hidden_nodes = 3
+model = TwoLayerPerceptron(2,hidden_nodes,1,activation_function,error_function)
 
 # Train the model
 loss = model.train(X, y, 0.1, 10000)
 
-# Show results
-print("predictions:",model.forward_pass(X))
+# Print results
+predictions = model.forward_pass(X).squeeze()
+print(f"predictions: {predictions}")
+preds_rounded = np.where(predictions > 0.5,1,0)
+print(f"predictions rounded: {preds_rounded}")
+# Plot results
 plt.plot(loss)
-plt.show()
-
+plt.title(f"2 layer perceptron with {hidden_nodes} nodes i nhidden layer")
+plt.xlabel("epochs")
+plt.ylabel("mean squared error")
+plt.savefig('loss.png')
