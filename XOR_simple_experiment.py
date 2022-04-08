@@ -5,10 +5,10 @@ from Activations import *
 from Model import *
 
 # Set seed for reproducibility
-#np.random.seed(0)
+np.random.seed(0)
 # Data
-X = np.array([[0,0],[0,1],[1,0],[1,1]])
-y = np.array([[0],[1],[1],[0]])
+X = np.array([[0,0],[0,1],[1,0],[1,1]])  # input
+y = np.array([[0],[1],[1],[0]])  # output
 
 activation_function = Sigmoid()
 error_function = mse
