@@ -1,5 +1,5 @@
 # Neural Network from scratch
-![Screenshot](net.png) <br/>
+![Screenshot](net.png) <br/><br/>
 Small library of neural networks created from scratch with python and numpy. <br/>
 This project was created during my Master's course at Leiden University. Its purpose was to learn in depth about gradient descent and backpropagation. <br/>
 The networks are tested by teaching them to emulate the XOR logic gate.
