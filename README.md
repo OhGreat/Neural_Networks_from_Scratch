@@ -29,9 +29,9 @@ The image below is a representation of the above observations:
 
 The labels represent the parameters of the experiments:<br/>
 <ul>
-  <li><b>hn</b> : denotes the hidden nodels in the hidden layer of the network.</li>
-  <li><b>lr</b> : denotes the learning rate used during training. </li>
-  <li><b>ok</b> : is a boolean value representing if the network learnt to simulate the XOR logic gate properly.</li>
+  <li><b>hn_<i>int</i></b> : denotes number of hidden nodels in the hidden layer of the network.</li>
+  <li><b>lr_<i>float</i></b> : denotes the learning rate used during training. </li>
+  <li><b>ok_<i>bool</i></b> : boolean value representing if the test on the network gave the correct results after training.</li>
 </ul>
 
 It is obvious that the experiment with two hidden nodes was not able to learn the XOR logic gate properly, converging to a  Mean Squared Error of around 0.15.
