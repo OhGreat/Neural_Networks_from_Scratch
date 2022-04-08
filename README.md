@@ -5,11 +5,13 @@ This project was created during my Master's course at Leiden University. Its pur
 The model architecture allows for the creation of a two layer network with an arbitrary number of inputs, hidden nodes and output nodes.<br/>
 The network has been tested by emulating the XOR logic gate.
 
+
 ## Requirements
 <ul>
   <li>Python 3</li>
   <li>numpy >=1.19</li>
 </ul>
+
 
 ## Usage
 To run a single experiment run the file *XOR_experiment.py*
@@ -40,18 +42,18 @@ The labels represent the parameters of the experiments:<br/>
 It is obvious that the experiment with two hidden nodes was not able to learn the XOR logic gate properly, converging to a  Mean Squared Error of around 0.15.
 
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
 ## Future Work
 - Implement multiple layers in the network.<br/>
 - Create bash script to run experiemnts.
 
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+
 ## References 
 <ul>
   <li><b>Deep Learning</b> by Aaron Courville, Ian Goodfellow, and Yoshua Bengio</li>
-
-
   <li><b>Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems</b> by Geron Aurelien</li>
 </ul>
 
