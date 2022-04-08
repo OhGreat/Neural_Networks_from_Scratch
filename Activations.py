@@ -7,6 +7,7 @@ class Activation():
     def derivative(x):
         pass
 
+
 class Sigmoid(Activation):
     def __call__(self, x):
         return 1/(1 + np.exp(-x))

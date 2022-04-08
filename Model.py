@@ -37,13 +37,17 @@ class TwoLayerPerceptron:
             return hidden_layer_out, output_layer_out
         return output_layer_out
 
-    def gradient_descent(self, X, y_true, lr):
+    def gradient_descent(self, X, y, lr):
         """ Gradient descent step with weight update
+            Parameters:
+                    - X      : input
+                    - y      : expected output
+                    - lr     : learning rate
         """
         # take each layer output value
         hidden_layer_out, output_layer_out = self.forward_pass(X,return_activations=True)
         # Propagate error to output layer
-        errors = y_true - output_layer_out
+        errors = y - output_layer_out
         d_predicted_output = errors * self.activation.derivative(output_layer_out)
         #Propagate error to hidden layer
         error_hidden_layer = np.dot(d_predicted_output,self.output_weights.T)
@@ -53,12 +57,17 @@ class TwoLayerPerceptron:
         self.output_bias += np.sum(d_predicted_output, axis=0, keepdims=True) * lr
         self.hidden_weights += np.dot(X.T,d_hidden_layer) * lr
         self.hidden_bias += np.sum(d_hidden_layer,axis=0,keepdims=True) * lr
-        # Return mean square error
-        mse_error = self.error_function(y_true, output_layer_out,ax=0)
+        # Return mean squared error
+        mse_error = self.error_function(y, output_layer_out,ax=0)
         return mse_error
 
     def train(self, X, y, lr, epochs):
-        """ Trains the model for a number of epochs
+        """ Trains the model for a number of epochs.
+            Parameters:
+                - X      : input
+                - y      : expected output
+                - lr     : learning rate
+                - epochs : iterations to train our model
         """
         loss = []
         for i in range(epochs):
