@@ -9,12 +9,12 @@ The network has been tested by emulating the XOR logic gate.
 Python 3 and numpy >=1.19 are required.
 
 ## Usage
-To run a single experiment use the file XOR_experiment.py
+To run a single experiment run the file *XOR_experiment.py*
 ``` 
 python XOR_experiment.py
 ```
 
-To run a multiple experiments and get a plot of the results use the file experiments.py
+To run multiple experiments and get a plot of the results use the file *experiments.py*
 ``` 
 python experiments.py
 ```
