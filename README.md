@@ -2,7 +2,7 @@
 ![Screenshot](net.png) <br/><br/>
 Small library of neural networks created from scratch with python and numpy. <br/>
 This project was created during my Master's course at Leiden University. Its purpose was to learn in depth about gradient descent and backpropagation techniques. <br/>
-The model architecture allows for the creation of a two layer network with an arbitrary number of inputs, hidden nodes in the hidden layer and output nodes.<br/>
+The model architecture allows for the creation of a two layer network with an arbitrary number of inputs, hidden nodes and output nodes.<br/>
 The network has been tested by emulating the XOR logic gate.
 
 ## Requirements
