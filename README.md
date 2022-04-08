@@ -1,7 +1,7 @@
 # Neural Network from scratch
 Small library of neural networks created from scratch with python and numpy. <br/>
-Created to learn in depth about gradient descent and backpropagation. <br/>
-The networks are then tested by teaching them to emulate the XOR logic gate.
+This project was created during my Master's course at Leiden University. Its purpose was to learn in depth about gradient descent and backpropagation <br/>
+The networks are tested by teaching them to emulate the XOR logic gate.
 
 ## Installation
 Python 3 and numpy >=1.19 are required
