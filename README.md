@@ -24,9 +24,11 @@ An example of the explained behaviour can be seen on the image below.
 ![Screenshot](results/losses.png)
 
 The labels represent the parameters of the experiments:<br/>
-hn : denotes the hidden nodels in the hidden layer of the network.<br/>
-lr : denotes the learning rate used during training. <br/>
-working: is a boolean value representing if the network learnt to simulate the XOR logic gate properly.
+<ul>
+  <li>hn : denotes the hidden nodels in the hidden layer of the network.</li>
+  <li>lr : denotes the learning rate used during training. </li>
+  <li>working: is a boolean value representing if the network learnt to simulate the XOR logic gate properly.</li>
+</ul>
 
 
 ## Contributing
