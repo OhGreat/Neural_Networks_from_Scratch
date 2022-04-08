@@ -38,7 +38,7 @@ for hn in hidden_nodes:
             learned = np.array_equal(y,preds)
 
             # name of current experiment
-            exp_name = f"hn_{hn}-lr_{lr}-working-{learned}"
+            exp_name = f"hn_{hn}-lr_{lr}-ok_{learned}"
             exp_names.append(exp_name)
 
             
