@@ -1,9 +1,9 @@
 from cProfile import label
 import numpy as np
 import matplotlib.pyplot as plt
-from error_functions import *
-from Activations import *
-from Model import *
+from classes.Error_functions import *
+from classes.Activations import *
+from classes.Model import *
 
 # Set seed for reproducibility
 np.random.seed(0)
@@ -11,14 +11,14 @@ np.random.seed(0)
 X = np.array([[0,0],[0,1],[1,0],[1,1]])  # input
 y = np.array([[0],[1],[1],[0]])  # output
 
-activation_function = Sigmoid()
-error_function = mse
-
 input_size = 2
 output_size = 1
 hidden_nodes = [2, 4, 8, 16]
 learning_rates = [0.1]
 epochs = [10000]
+
+activation_function = Sigmoid()
+error_function = MSE()
 
 losses = []
 exp_names = []
@@ -51,4 +51,4 @@ leg = ax.legend()
 plt.title(f"Experiments on NNs")
 plt.xlabel("epochs")
 plt.ylabel("mean squared error")
-plt.savefig('losses.png')
+plt.savefig('results/losses.png')

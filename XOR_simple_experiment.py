@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from error_functions import *
-from Activations import *
-from Model import *
+from classes.Error_functions import *
+from classes.Activations import *
+from classes.Model import *
 
 # Set seed for reproducibility
 np.random.seed(0)
@@ -10,12 +10,12 @@ np.random.seed(0)
 X = np.array([[0,0],[0,1],[1,0],[1,1]])  # input
 y = np.array([[0],[1],[1],[0]])  # output
 
-activation_function = Sigmoid()
-error_function = mse
 # Create Neural Network
 input_size = 2
 hidden_nodes = 3
 output_size = 1
+activation_function = Sigmoid()
+error_function = MSE()
 model = TwoLayerPerceptron( input_size,hidden_nodes,output_size,
                             activation_function,error_function)
 
@@ -33,4 +33,4 @@ plt.plot(loss)
 plt.title(f"2 layer perceptron with {hidden_nodes} nodes in hidden layer")
 plt.xlabel("epochs")
 plt.ylabel("mean squared error")
-plt.savefig('loss.png')
+plt.savefig('results/loss.png')
