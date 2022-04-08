@@ -2,6 +2,12 @@ import numpy as np
 
 
 class TwoLayerPerceptron:
+    """ Simple neural network implementing a hidden layer.
+        Methods implemented:
+            - forward pass
+            - gradient descent step
+            - model training
+    """
     def __init__(self, input_size, hidden_size, output_size, activation, error_function):
         self.hidden_weights = np.random.normal(size=(input_size, hidden_size))
         self.hidden_bias = np.random.uniform(size=(1, hidden_size))
@@ -11,6 +17,9 @@ class TwoLayerPerceptron:
 
         self.activation = activation
         self.error_function = error_function
+    
+    def __call__(self, input, return_activations=False):
+        self.forward_pass(input,return_activations)
 
     def forward_pass(self, input, return_activations=False):
         """ The forward pass of the neural network.
@@ -29,7 +38,7 @@ class TwoLayerPerceptron:
         return output_layer_out
 
     def gradient_descent(self, X, y_true, lr):
-        """ Gradient descent step
+        """ Gradient descent step with weight update
         """
         # take each layer output value
         hidden_layer_out, output_layer_out = self.forward_pass(X,return_activations=True)
@@ -49,6 +58,8 @@ class TwoLayerPerceptron:
         return mse_error
 
     def train(self, X, y, lr, epochs):
+        """ Trains the model for a number of epochs
+        """
         loss = []
         for i in range(epochs):
             loss.append(self.gradient_descent(X, y, lr))

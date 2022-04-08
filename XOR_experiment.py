@@ -5,7 +5,7 @@ from Activations import *
 from Model import *
 
 # Set seed for reproducibility
-np.random.seed(0)
+#np.random.seed(0)
 # Data
 X = np.array([[0,0],[0,1],[1,0],[1,1]])
 y = np.array([[0],[1],[1],[0]])
@@ -30,7 +30,7 @@ print(f"predictions rounded: {preds_rounded}")
 print(f"expected results: {y.squeeze()}")
 # Plot results and save figure
 plt.plot(loss)
-plt.title(f"2 layer perceptron with {hidden_nodes} nodes i nhidden layer")
+plt.title(f"2 layer perceptron with {hidden_nodes} nodes in hidden layer")
 plt.xlabel("epochs")
 plt.ylabel("mean squared error")
 plt.savefig('loss.png')
