@@ -40,9 +40,9 @@ class TwoLayerPerceptron:
     def gradient_descent(self, X, y, lr):
         """ Gradient descent step with weight update
             Parameters:
-                    - X      : input
-                    - y      : expected output
-                    - lr     : learning rate
+                - X      : input
+                - y      : expected output
+                - lr     : learning rate
         """
         # take each layer output value
         hidden_layer_out, output_layer_out = self.forward_pass(X,return_activations=True)
