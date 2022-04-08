@@ -41,3 +41,10 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Future Work
 - Implement multiple layers in the network.
+
+## References 
+<b>Deep Learning</b> by Aaron Courville, Ian Goodfellow, and Yoshua Bengio
+<br/>
+<b>Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems</b> by Geron Aurelien
+
+
