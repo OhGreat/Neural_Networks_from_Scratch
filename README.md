@@ -44,7 +44,8 @@ It is obvious that the experiment with two hidden nodes was not able to learn th
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Future Work
-- Implement multiple layers in the network.
+- Implement multiple layers in the network.<br/>
+- Create bash script to run experiemnts.
 
 ## References 
 <ul>
