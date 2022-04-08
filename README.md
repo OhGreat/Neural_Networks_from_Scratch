@@ -1,6 +1,6 @@
 # Neural Network from scratch
-Small library of neural networks created from scratch with python and numpy.
-Created to learn in depth about gradient descent and backpropagation.
+Small library of neural networks created from scratch with python and numpy. <br/>
+Created to learn in depth about gradient descent and backpropagation. <br/>
 The networks are then tested by teaching them to emulate the XOR logic gate.
 
 ## Installation
@@ -18,7 +18,13 @@ python experiments.py
 ```
 
 ## Observations
-It interesting to note that when running the network with only two hidden nodes (which is the minimum requirement to emulate the XOR logic gate), the network sometimes fails to learn to simulate XOR. An example of this behaviour can be seen when running experiments with np.random.seed(0). In general, this is the result of bad weight initialization and the more neurons we add to the hidden layer, the harder it is for weight inintialization to influence the learning of the model.
+It interesting to note that when running the network with only two hidden nodes (which is the minimum requirement to emulate the XOR logic gate), the network sometimes fails to learn to simulate XOR. <br/>
+An example of this behaviour can be seen when running experiments with np.random.seed(0). In general, this is the result of bad weight initialization and the more neurons we add to the hidden layer, the harder it is for weight inintialization to influence the learning of the model.<br/>
+
+![Screenshot](results/losses.png)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Future Work
+- Implement multiple layers in the network.
