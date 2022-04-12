@@ -14,12 +14,12 @@ The network has been tested by simulating the XOR logic gate.
 
 
 ## Usage
-To run a single experiment run the file *XOR_experiment.py*
+To run a single experiment run the file `XOR_experiment.py`
 ``` 
 python XOR_experiment.py
 ```
 
-To run multiple experiments and get a plot of the results use the file *experiments.py*
+To run multiple experiments and get a plot of the results use the file `experiments.py`
 ``` 
 python experiments.py
 ```
