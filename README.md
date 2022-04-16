@@ -51,7 +51,8 @@ It is obvious that the experiment with two hidden nodes was not able to learn th
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 
-## References 
+## References
+The following literature was used as reference:
 <ul>
   <li><b>Deep Learning</b> by Aaron Courville, Ian Goodfellow, and Yoshua Bengio</li>
   <li><b>Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems</b> by Geron Aurelien</li>
