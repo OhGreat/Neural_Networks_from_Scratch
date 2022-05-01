@@ -7,10 +7,10 @@ The network has been tested by simulating the XOR logic gate.
 
 
 ## Requirements
-<ul>
-  <li>Python 3</li>
-  <li>numpy >=1.19</li>
-</ul>
+
+- `Python 3`
+- `numpy >=1.19`
+
 
 
 ## Usage
@@ -45,10 +45,6 @@ It is obvious that the experiment with two hidden nodes was not able to learn th
 ## Future Work
 - Implement multiple hidden layers in the network.<br/>
 - Create bash script to run experiemnts.
-
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 
 ## References
